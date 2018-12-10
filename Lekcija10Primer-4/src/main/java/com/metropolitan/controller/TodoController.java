@@ -67,7 +67,7 @@ public class TodoController {
         this.todoService.complete(todoId);
         return "redirect:/todos";
     }
-
+    
     @DeleteMapping("/{todoId}")
     public String delete(@PathVariable("todoId") long todoId) {
         this.todoService.remove(todoId);

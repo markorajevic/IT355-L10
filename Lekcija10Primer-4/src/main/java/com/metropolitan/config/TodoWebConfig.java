@@ -30,7 +30,8 @@ public class TodoWebConfig implements WebMvcConfigurer {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("redirect:/todos");
+        registry.addViewController("").setViewName("redirect:/todos");
+        registry.addViewController("/").setViewName("forward:/todos");
     }
 
     @Bean
